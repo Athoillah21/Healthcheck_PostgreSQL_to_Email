@@ -37,7 +37,7 @@ A shell-based utility to monitor PostgreSQL database health, generate an HTML re
 1. **Generate HTML Report**
 
    ```bash
-   ./generate_html_dev.sh -h ${server_host} -p ${db_port} -d ${db_name} -U ${db_user}
+   ./generate_html.sh -h ${server_host} -p ${db_port} -d ${db_name} -U ${db_user}
    ```
 
    This script connects to the PostgreSQL database, retrieves health metrics, and generates an HTML report saved in the `report/` directory.
@@ -55,7 +55,7 @@ A shell-based utility to monitor PostgreSQL database health, generate an HTML re
 To automate the health check and email dispatch, add the following to your crontab:
 
 ```bash
-0 8 * * * /path/to/Healthcheck_PostgreSQL_to_Email/generate_html_dev.sh && /path/to/Healthcheck_PostgreSQL_to_Email/hc_mail.sh
+0 8 * * * /path/to/Healthcheck_PostgreSQL_to_Email/generate_html.sh && /path/to/Healthcheck_PostgreSQL_to_Email/hc_mail.sh
 ```
 
 This example runs the scripts daily at 8 AM.
