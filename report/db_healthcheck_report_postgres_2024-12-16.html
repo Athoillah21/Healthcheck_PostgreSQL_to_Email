@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PostgreSQL Health Check Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #003366;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #00509e;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            text-align: left;
+            padding: 10px;
+        }
+        table th {
+            background-color: #007acc;
+            color: white;
+        }
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        table tr:hover {
+            background-color: #d9edf7;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>PostgreSQL Health Check Report for Database postgres at localhost</h1>
+    <hr>
+    <p>Report generated on: Mon Dec 16 16:04:33 WIB 2024</p>
+<h2>Database Uptime</h2>
+<table border="1">
+  <tr>
+    <th align="center">db_uptime</th>
+  </tr>
+  <tr valign="top">
+    <td align="left">00:00:24</td>
+  </tr>
+</table>
+<p>(1 row)<br />
+</p>
+<h2>Is Database in Recovery?</h2>
+<table border="1">
+  <tr>
+    <th align="center">pg_is_in_recovery</th>
+  </tr>
+  <tr valign="top">
+    <td align="left">f</td>
+  </tr>
+</table>
+<p>(1 row)<br />
+</p>
+<h2>Client Connections</h2>
+<table border="1">
+  <tr>
+    <th align="center">client_addr</th>
+    <th align="center">usename</th>
+    <th align="center">datname</th>
+    <th align="center">state</th>
+    <th align="center">count</th>
+  </tr>
+  <tr valign="top">
+    <td align="left">&nbsp; </td>
+    <td align="left">&nbsp; </td>
+    <td align="left">&nbsp; </td>
+    <td align="left">&nbsp; </td>
+    <td align="right">4</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">&nbsp; </td>
+    <td align="left">ubuntu</td>
+    <td align="left">&nbsp; </td>
+    <td align="left">&nbsp; </td>
+    <td align="right">1</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">127.0.0.1</td>
+    <td align="left">athoillah</td>
+    <td align="left">postgres</td>
+    <td align="left">active</td>
+    <td align="right">1</td>
+  </tr>
+</table>
+<p>(3 rows)<br />
+</p>
+<h2>Total Connections</h2>
+<table border="1">
+  <tr>
+    <th align="center">count</th>
+  </tr>
+  <tr valign="top">
+    <td align="right">6</td>
+  </tr>
+</table>
+<p>(1 row)<br />
+</p>
+<h2>Max Connections</h2>
+<table border="1">
+  <tr>
+    <th align="center">max_connections</th>
+  </tr>
+  <tr valign="top">
+    <td align="left">100</td>
+  </tr>
+</table>
+<p>(1 row)<br />
+</p>
+<h2>Replication Status</h2>
+<table border="1">
+  <tr>
+    <th align="center">pid</th>
+    <th align="center">usesysid</th>
+    <th align="center">usename</th>
+    <th align="center">application_name</th>
+    <th align="center">client_addr</th>
+    <th align="center">client_hostname</th>
+    <th align="center">client_port</th>
+    <th align="center">backend_start</th>
+    <th align="center">backend_xmin</th>
+    <th align="center">state</th>
+    <th align="center">sent_lsn</th>
+    <th align="center">write_lsn</th>
+    <th align="center">flush_lsn</th>
+    <th align="center">replay_lsn</th>
+    <th align="center">write_lag</th>
+    <th align="center">flush_lag</th>
+    <th align="center">replay_lag</th>
+    <th align="center">sync_priority</th>
+    <th align="center">sync_state</th>
+    <th align="center">reply_time</th>
+  </tr>
+</table>
+<p>(0 rows)<br />
+</p>
+<h2>Dead Tuples and Auto-Vacuum</h2>
+<table border="1">
+  <tr>
+    <th align="center">schemaname</th>
+    <th align="center">relname</th>
+    <th align="center">last_autoanalyze</th>
+    <th align="center">n_live_tup</th>
+    <th align="center">n_dead_tup</th>
+    <th align="center">last_vacuum</th>
+    <th align="center">last_autovacuum</th>
+  </tr>
+</table>
+<p>(0 rows)<br />
+</p>
+<h2>Blocked and Locking Processes</h2>
+<table border="1">
+  <tr>
+    <th align="center">blocked_pid</th>
+    <th align="center">blocked_user</th>
+    <th align="center">blocking_pid</th>
+    <th align="center">blocking_user</th>
+    <th align="center">blocked_statement</th>
+    <th align="center">current_statement_in_blocking_process</th>
+    <th align="center">blocked_application</th>
+    <th align="center">blocking_application</th>
+  </tr>
+</table>
+<p>(0 rows)<br />
+</p>
+<h2>Port Configuration</h2>
+<table border="1">
+  <tr>
+    <th align="center">port</th>
+  </tr>
+  <tr valign="top">
+    <td align="left">9945</td>
+  </tr>
+</table>
+<p>(1 row)<br />
+</p>
+<h2>System Details</h2>
+<pre>Mon Dec 16 16:04:33 WIB 2024</pre>
+<pre>ip-172-31-16-91.ap-southeast-1.compute.internal</pre>
+<footer>
+    <p>Generated by PostgreSQL Healthcheck Report Script - Telkomsigma</p>
+</footer>
+</body>
+</html>
